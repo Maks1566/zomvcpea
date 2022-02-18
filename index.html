@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 
+			left: 620px;	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			left: 1500px;
+			transition-duration: 1s;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 760px; top: 50px; color: darkgreen; font-size: 30px;">Ваш счёт: <span style="color: darkgreen; font-size: 30px;" class="score"></span></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 260px; ">		
+		<img class="shooter" src="peashooter.png"  style="top: 390px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 530px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 660px; ">
+		<img class="shooter" src="peashooter.png"  style="top: 770px; ">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 260px">
+		<img class="zombies" src="zombie2.png" style="top: 390px">
+		<img class="zombies" src="zombie2.png" style="top: 530px">
+		<img class="zombies" src="zombie4.png" style="top: 660px">
+		<img class="zombies" src="zombie4.png" style="top: 770px">
+	</div>
+<script>
+
+	let  sc = 0;
+	document.querySelector(".score").innerHTML = sc
+	let sh0 = 1500;
+	let sh1 = 1500;
+	let sh2 = 1500;
+	let sh3 = 1500;
+	let sh4 = 1500;
+	let zom = document.querySelectorAll(".zombies");
+	let pea = document.querySelectorAll(".shooter");
+	zom[0].onclick = function(){
+		sh0 = sh0 - 100;
+		zom[0].style.left = sh0 + "px";
+		if(sh0 == 600){
+			pea[0].style.display = "none"
+			sc = sc + 1;
+			document.querySelector(".score").innerHTML = sc
+			if(sc ==  1){
+				alert ("Первый горошек съеден")
+			}
+			if(sc ==  2){
+				alert ("Второй горошек съеден")
+			}
+			if(sc ==  3){
+				alert ("Третий горошек съеден")
+			}
+			if(sc ==  4){
+				alert ("Четвёртый горошек съеден")
+			}
+			if(sc ==  5){
+				alert ("Пятый горошек съеден")
+				zom[0].style.display = "none"
+				zom[1].style.display = "none"
+				zom[2].style.display = "none"
+				zom[3].style.display = "none"
+				zom[4].style.display = "none"
+				alert("Вы выйграли!")
+			}
+		}
+		if(sh0 == 500){
+			zom[0].style.display = "none"
+		}
+	}
+	zom[1].onclick = function(){
+		sh1 = sh1 - 100;
+		zom[1].style.left = sh1 + "px";
+		if(sh1 == 600){
+			pea[1].style.display = "none"
+			sc = sc + 1;
+			document.querySelector(".score").innerHTML = sc
+			if(sc ==  1){
+				alert ("Первый горошек съеден")
+			}
+			if(sc ==  2){
+				alert ("Второй горошек съеден")
+			}
+			if(sc ==  3){
+				alert ("Третий горошек съеден")
+			}
+			if(sc ==  4){
+				alert ("Четвёртый горошек съеден")
+			}
+			if(sc ==  5){
+				alert ("Пятый горошек съеден")
+				zom[0].style.display = "none"
+				zom[1].style.display = "none"
+				zom[2].style.display = "none"
+				zom[3].style.display = "none"
+				zom[4].style.display = "none"
+				alert("Вы выйграли!")
+			}
+		}
+		if(sh1 == 500){
+			zom[1].style.display = "none"
+		}
+	}
+	zom[2].onclick = function(){
+		sh2 = sh2 - 100;
+		zom[2].style.left = sh2 + "px";
+		if(sh2 == 600){
+			pea[2].style.display = "none"
+			sc = sc + 1;
+			document.querySelector(".score").innerHTML = sc
+			if(sc ==  1){
+				alert ("Первый горошек съеден")
+			}
+			if(sc ==  2){
+				alert ("Второй горошек съеден")
+			}
+			if(sc ==  3){
+				alert ("Третий горошек съеден")
+			}
+			if(sc ==  4){
+				alert ("Четвёртый горошек съеден")
+			}
+			if(sc ==  5){
+				alert ("Пятый горошек съеден")
+				zom[0].style.display = "none"
+				zom[1].style.display = "none"
+				zom[2].style.display = "none"
+				zom[3].style.display = "none"
+				zom[4].style.display = "none"
+				alert("Вы выйграли!")
+			}
+		}
+		if(sh2 == 500){
+			zom[2].style.display = "none"
+		}
+	}
+	zom[3].onclick = function(){
+		sh3 = sh3 - 100;
+		zom[3].style.left = sh3 + "px";
+		if(sh3 == 600){
+			pea[3].style.display = "none"
+			sc = sc + 1;
+			document.querySelector(".score").innerHTML = sc
+			if(sc ==  1){
+				alert ("Первый горошек съеден")
+			}
+			if(sc ==  2){
+				alert ("Второй горошек съеден")
+			}
+			if(sc ==  3){
+				alert ("Третий горошек съеден")
+			}
+			if(sc ==  4){
+				alert ("Четвёртый горошек съеден")
+			}
+			if(sc ==  5){
+				alert ("Пятый горошек съеден")
+				zom[0].style.display = "none"
+				zom[1].style.display = "none"
+				zom[2].style.display = "none"
+				zom[3].style.display = "none"
+				zom[4].style.display = "none"
+				alert("Вы выйграли!")
+			}
+		}
+		if(sh3 == 500){
+			zom[3].style.display = "none"
+		}
+	}
+	zom[4].onclick = function(){
+		sh4 = sh4 - 100;
+		zom[4].style.left = sh4 + "px";
+		if(sh4 == 600){
+			pea[4].style.display = "none"
+			sc = sc + 1;
+			document.querySelector(".score").innerHTML = sc
+			if(sc ==  1){
+				alert ("Первый горошек съеден")
+			}
+			if(sc ==  2){
+				alert ("Второй горошек съеден")
+			}
+			if(sc ==  3){
+				alert ("Третий горошек съеден")
+			}
+			if(sc ==  4){
+				alert ("Четвёртый горошек съеден")
+			}
+			if(sc ==  5){
+				alert ("Пятый горошек съеден")
+				zom[0].style.display = "none"
+				zom[1].style.display = "none"
+				zom[2].style.display = "none"
+				zom[3].style.display = "none"
+				zom[4].style.display = "none"
+				alert("Вы выйграли!")
+			}
+		}
+		if(sh4 == 500){
+			zom[4].style.display = "none"
+		}
+	}
+
+</script>
+</body>
+</html>
